@@ -1,0 +1,39 @@
+Activate env enviornment
+Go to python project -> Type cmd -> venv\scripts\activate
+
+1. pytest : - Run all the test cases in all the package
+2. pytest -v:  Verbose mode ( detailed view)
+3. pytest automation\test_module01.py:--> Run a single test file 
+4. pytest automation\py_assertions -> Run whole directory 
+5. pytest -v automation\test_module02.py::TestMyStuff ->Run Test Class
+6. pytest -v automation\test_module02.py::TestMyStuff::test_strs -> Run Test Method of a Test Class 
+7. pytest -v automation\test_module01.py::test_a1 ->   Run Test Function of a TestModule
+
+Test can have multiple markers. A marker can be on multiple tests
+-----------------------------------------------------
+8. pytest -m <markname> -> Run only marked test
+9. pytest -v -m sanity -> Run only sanity test 
+10. pytest -v -m "sanity and not str" -> Run only sanity test not str
+9. pytest -v -m "sanity and not str" -> Run only sanity test
+11. pytest -v -m "not sanity" automation\test_markers.py -> Run all the test except sanity
+12. pytest -v -m "sanity and str" -> Run sanity and str
+13. pytest -v -m "sanity or str" -> either sanity or str or both
+14. pytest -v -m "smoke" ->Marking whole class or modules level
+15. Define markers in config file [pytest.ini file in root folder] to avoid warning
+16. xPASS: test passed despite being expected to fail (marked with pytest.mark.fail)
+17. Xfail -> It should be failed only when the condition is true
+18. pytest -v -k "module" -> RUn test case using substring
+19 pytest -v -k "module" --tb=no-> option "--tb=no" for short output
+20.  pytest -v -k "case" --tb=no-> -k filter out module or test name
+21. pytest -v -k "case or str" --tb=no -> select both case or str
+22. pytest -v -k "case or xfail" --tb=no -> select both case or xfail
+23. pytest -v -k "module and not case" --tb=no -> do not run case test
+24. pytest -v -k "module and not case" --tb=no -x  -> option: -x stop after first failure(Existed on first test failed)
+24. pytest -v -k "module and not case" --tb=no -x  -> option: --maxfail = 2 -> stop after specified ''maxfail'
+25. pytest -v -k "module and not case" --tb=no -q  -> option: -q, --quiet ( decrease verbosity) [useful actual testing]
+25. pytest -v -k "module and not case" --tb=no --collect-only -> option: --collect-only, --co (only collect the tests, do not execute them, no run, just see the tests pytest discovered)
+26. Testing Ordering: - Pytest run tests in the order they appear in a module
+27. pytest -v -k "module and not case" --tb=no --lf -> option: --lf, --last-failed run only the tests that failed at the last run (or all if none failed)
+27. pytest -v -k "module and not case" --tb=no --ff -> option: --ff, --failed-first run all the tests , but run the last failure first
+28 pytest --help  -> find out all the options
+

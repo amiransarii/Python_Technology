@@ -1,0 +1,45 @@
+-----------------------RegEx Metacharacters------------------------------------------
+ Metacharacters are the characters to be used for making the search pattern
+Character           Format         Description
+\                   "\a"           Indicate special sequence and skaps characters
+.                   "Wo..d"        Catch any character
+[]                 "[a-zA-Z]"     Set of characters
+()                                 Capture and group
+{}                 "Wo{5}"         Exactly the specified numbers of occurance
+|                  "a|A"           OR, Either
+*                  "Wor*"          Zero or more occurrences
++                 "Wor+"           One or more occurrences
+^                 "^Hello"        Start With
+$                 "World$"         Ends With
+------------------------Special Sequences--------------------
+To define a special sequence user must add backslash(\) followed by special character
+Note: 1. In this table the upper letters are mainly the negation of the lower letters
+Note: 2. The r in the beginning of some special characters , is to make sure that the string  which is passed to the function is a raw string
+
+\A            "\AThe"                    Returns match with the specified characters located at the the beginning of the string
+\b            r"\bHell" and r"rld\b"     Returns match with the specified characters located at the beginning or at the end of a word,according to its position
+\B            r"\BHell" and r"rid\B      Returns match with the specified characters which are not located at the beginning or at the end of a  word, according to its position
+\d            \d                         Returns match where the string contains digit
+\D            \D                         Returns match where the string does not contain digit
+\s            "\s"                       Return match where the string contains a white space character
+\S            "\S"                       Returns match where the string does not contain a white space charactes
+\w           "\w"                        Returns match where the string contains any word characters
+\W            "\W"                       Returns match where the string does not contain any word characters
+\Z           "World\Z"                   Returns match with the specified characters at the end of the string
+
+-----------------------------------------RegEx Functions------------------------------------------------
+There are some built-in functions in re module which enable users to search a string for a pattern
+Function              Description
+findall()             Returns a list of all matches
+search()              Returns a match object
+split()               Returns a list of splitted string at each match
+sub()                Replace matches
+
+-----------------------------------Match Object Methods---------------------------------------
+Match object provides  information about the search and result. Basically , match object has methods and properties which are accessable by programmers
+and are used to get the information about the search and result
+Method                   Description
+group()                  Returns the part of the string where there was a match
+string                   Returns the string passed into the function
+span()                   Returns a tuple containing the start-, and end positions of the match
+

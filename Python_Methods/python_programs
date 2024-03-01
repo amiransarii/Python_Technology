@@ -1,0 +1,13 @@
+1. Given two unsorted arrays arr1[] and arr2[]. They may contain duplicates.
+    For each element in arr1[] count elements less than or equal to it in array arr2[].
+#The purpose of Bisect algorithm is to find a position in list where an element needs to be inserted to keep the list sorted.
+#Python in its definition provides the bisect algorithms using the module “bisect”
+ which allows to keep the list in sorted order after insertion of each elemen
+import bisect as bt
+class Solution:
+    def countEleLessThanOrEqual(self,arr1,n1,arr2,n2):
+        arr2.sort()
+        res = []
+        for e in arr1:
+            res.append(bt.bisect(arr2,e))
+        return res

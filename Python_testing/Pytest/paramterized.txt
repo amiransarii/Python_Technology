@@ -1,0 +1,25 @@
+Fixtures: Function that are run by pytest before(and sometimes after) the actual test functions
+Eg.Setup DB Connection, or initialize webdriver
+Can put fixturs in individual test files or in confest.py for making fixtues available in multiple 
+test files 
+
+Fixture Basics
+
+conftest.py: -> Share fixturs across multiple tests.
+Can have single confest.py in centalized directory for all
+test to access the fixtues.
+
+Also can have other conftest.py files in subdirectories
+It should not be imported by test files
+
+conftest.py is python module. no need imported by test files
+
+pytest -v -k test_fixtures03 --setup-show
+M setup01 -> Module run first
+F setup02 -> Run After Module 
+
+
+The "Factory as Fixture" pattern can help in situations where the result of a fixture is needed
+multiple times in a single test. Instead of returning data directly, the fixture 
+instead returns a function which generates the data. This function can be then called
+multiple times in test.

@@ -1,0 +1,6 @@
+PASSED(.): The test ran successfully
+FAILED(F): the test did not run successfully
+SKIPPED(s): the test was skipped
+XFAIL(x): the test was not supposed to pass, ran and failed
+XPASS(X): the test was not supposed to pass, rand and passed
+ERROR(E): An exception happened outside of the test function

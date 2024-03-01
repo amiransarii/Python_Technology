@@ -1,0 +1,24 @@
+Format                              Description
+%a                                  Short weekday ->Fri
+%A                                  Full weekday -> Friday
+%b                                  Short Month Name -> Nov
+%B                                  Full Month Name -> November
+%c                                  Local date and time -> Fri Nov 19 10:40:54 2021
+%d                                  Day of Month -> 19
+%H                                  Hour 00-23  -> 10
+%I                                  Hour 00-12 -> 10
+%j                                  Day Number of year -> 323
+%m                                  Months as a number -> 11
+%M                                  Minute 00-59 -> 43
+%p                                  AM/PM   -> AM
+%S                                  Second 00-59   -> 50
+%U                                  Week Number of year, starts by Sunday -> 46
+%w                                  Weekday as a number -> 5
+%W                                  Week Number of year, start by Monday -> 46
+%x                                  Local date -> 11/19/21
+%X                                  Local Time  -> 10:45:28
+%y                                  Year, Short version -> 21
+%Y                                  Year, Full version -> 2021
+%z                                  UTC offset
+%Z                                  Timezone
+%%                                  % character
